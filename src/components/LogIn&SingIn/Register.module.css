@@ -1,15 +1,16 @@
 .modal{
+    padding: 40px 20px 40px 20px  ;
     color: white;
     width: 300px;
     height: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     border: 3px solid white;
     top: 20%;
     position: fixed;
     border-radius: 5%;
-
-
 }
 .overlay {
     position: fixed;
@@ -21,4 +22,24 @@
     justify-content: center;
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(111, 111, 200, 1) 66%, rgba(0, 212, 255, 1) 100%);
     z-index: 1200;
+}
+.Input{
+    border-color:#fff;
+    color: #fff;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 30px 0;
+}
+.link{
+    color: #fff;
+}
+.link:hover, .link:active{
+    color:red;
 }

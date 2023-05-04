@@ -1,6 +1,6 @@
 import React from 'react';
-import css from 'components/Form.module.css';
-import { useInputContex } from './Context';
+import css from '../Form/Form.module.css';
+import { useInputContex } from '../../hooks/Context';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact, getContacts } from 'redux/contactsSlice';
 import { nanoid } from '@reduxjs/toolkit';
