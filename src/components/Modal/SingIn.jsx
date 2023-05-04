@@ -3,7 +3,7 @@ import React from 'react';
 export function SingIn() {
   return (
     <div>
-      <h2>Sing in</h2>
+      <h2>Sing In</h2>
       <form action="">
         <label htmlFor="">
           Name

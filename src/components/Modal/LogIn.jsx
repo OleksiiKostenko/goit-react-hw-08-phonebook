@@ -1,20 +1,21 @@
+import { FormGroup, Input, InputLabel } from '@mui/material';
 import React from 'react';
 
 export function LogIn() {
   return (
     <div>
-      <h2>Log in</h2>
-      <form>
-        <label htmlFor="email">
+      <h2>Log In</h2>
+      <FormGroup>
+        <InputLabel htmlFor="email">
           Email
-          <input type="email" name="" />
-        </label>
-        <label htmlFor="password">
+          <Input type="email" name="" />
+        </InputLabel>
+        <InputLabel htmlFor="password">
           Password
-          <input type="password" name="" />
-        </label>
+          <Input type="password" name="" />
+        </InputLabel>
         <button type="submit">Submit</button>
-      </form>
+      </FormGroup>
     </div>
   );
 }

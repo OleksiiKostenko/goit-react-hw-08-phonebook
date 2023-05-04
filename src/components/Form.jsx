@@ -1,10 +1,11 @@
+import React from 'react';
 import css from 'components/Form.module.css';
 import { useInputContex } from './Context';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact, getContacts } from 'redux/contactsSlice';
 import { nanoid } from '@reduxjs/toolkit';
 
-export const Form = () => {
+const FormElement = () => {
   const { nameValue, addName, numberValue, addNumber } = useInputContex();
 
   const contacts = useSelector(getContacts);
@@ -38,7 +39,7 @@ export const Form = () => {
   return (
     <form className={css.form} autoComplete="off" onSubmit={handleSubmit}>
       <label className={css.label}>
-        Name{' '}
+        Name
         <input
           className={css.input}
           type="text"
@@ -69,3 +70,5 @@ export const Form = () => {
     </form>
   );
 };
+
+export default FormElement;

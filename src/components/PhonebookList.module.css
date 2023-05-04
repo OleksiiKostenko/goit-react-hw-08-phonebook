@@ -1,5 +1,5 @@
 .list_item{
-    border: 3px solid black;
+    border: 3px solid white;
     box-shadow: 2px 2px 5px #ffd700;
     border-radius: 5px;
     margin-left: 70px;
@@ -12,7 +12,7 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 .list_btn{
     margin-right: 60px;
@@ -27,6 +27,7 @@
 .list_title{
     font-size: 17px;
     font-weight: 600;
+    color: white;
     
 }
 .list_btn:hover,
