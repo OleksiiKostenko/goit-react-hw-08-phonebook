@@ -4,12 +4,23 @@ import { Login } from '../../Page/Login';
 import { Home } from '../../Page/Home';
 import NotFound from '../../Page/NotFound';
 import { Register } from 'Page/Register ';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
 import Contacts from 'Page/Contacts';
+import { useDispatch, useSelector } from 'react-redux';
+import { refreshUser } from 'redux/Autorization/auth-oprations';
 
 export const App = () => {
-  return (
+  const dispatch = useDispatch();
+  const refresh = useSelector(state => state.auth.isRefreshing);
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return refresh ? (
+    <b>Refreshing user...</b>
+  ) : (
     <Context>
       <Routes>
         <Route

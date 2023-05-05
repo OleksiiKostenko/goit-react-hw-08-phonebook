@@ -2,7 +2,7 @@ import React from 'react';
 import css from '../Form/Form.module.css';
 import { useInputContex } from '../../hooks/Context';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact, getContacts } from 'redux/contactsSlice';
+import { addContact, getContacts } from 'redux/Contacts/contactsSlice';
 import { nanoid } from '@reduxjs/toolkit';
 
 const FormElement = () => {

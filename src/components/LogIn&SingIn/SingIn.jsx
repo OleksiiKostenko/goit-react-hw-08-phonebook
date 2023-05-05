@@ -3,6 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { CssTextField } from '../styleComponent/InputStyle';
 import css from './Register.module.css';
+import { register } from 'redux/Autorization/auth-oprations';
 
 export function SingIn() {
   const dispatch = useDispatch();
@@ -10,11 +11,13 @@ export function SingIn() {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch({
-      name: form.elements.name.value,
-      email: form.elements.email.value,
-      password: form.elements.password.value,
-    });
+    dispatch(
+      register({
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
     form.reset();
   };
 
