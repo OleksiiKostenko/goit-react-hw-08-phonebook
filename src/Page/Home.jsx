@@ -1,9 +1,12 @@
 import React from 'react';
+import css from './Page.module.css';
 
-export function Home() {
+function Home() {
   return (
-    <div>
-      <h1>You best contacts book</h1>
+    <div className={css.wrapp}>
+      <h1 className={css.title}>Your best contacts book</h1>
     </div>
   );
 }
+
+export default Home;

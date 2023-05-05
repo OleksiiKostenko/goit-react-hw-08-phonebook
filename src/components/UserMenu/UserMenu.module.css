@@ -1,0 +1,13 @@
+.wrapp{
+    margin-left: auto;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.title{
+    margin: 0;
+    font-size: 40px;
+    margin-right: 100px;
+    color: #fff;
+    text-shadow: #FC0 1px 0 10px;
+}

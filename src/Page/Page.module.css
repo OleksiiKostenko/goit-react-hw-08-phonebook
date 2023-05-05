@@ -1,0 +1,11 @@
+.title{
+    color:#fff;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: #FC0 1px 0 10px;
+}
+.wrapp{
+display: flex;
+justify-content: center;
+padding-top: 200px;
+}

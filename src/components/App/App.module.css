@@ -1,10 +1,24 @@
 .title{
-    margin-left: 50px;
+    text-align: center;
     font-size: 40px;
     color: white;
+    text-shadow: #FC0 1px 0 10px;
 }
 .contact_title{
-    margin-left: 50px;
-    font-size: 30px;
+    text-align: center;
+    font-size: 40px;
     color: white;
+    text-shadow: #FC0 1px 0 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+.wrapp{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }

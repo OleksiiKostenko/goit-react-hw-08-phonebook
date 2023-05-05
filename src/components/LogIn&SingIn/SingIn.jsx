@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { CssTextField } from '../styleComponent/InputStyle';
 import css from './Register.module.css';
-import { register } from 'redux/Autorization/auth-oprations';
+import { register } from 'redux/Autorization/authOprations';
 
 export function SingIn() {
   const dispatch = useDispatch();
@@ -73,7 +73,13 @@ export function SingIn() {
             },
           }}
         />
-        <Button sx={{ mt: 2 }} type="submit" variant="contained" size="small">
+        <Button
+          sx={{ mt: 2 }}
+          color="secondary"
+          type="submit"
+          variant="contained"
+          size="small"
+        >
           Submit
         </Button>
       </form>

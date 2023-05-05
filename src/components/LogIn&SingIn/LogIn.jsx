@@ -1,19 +1,11 @@
 import { Button } from '@mui/material';
 import { CssTextField } from 'components/styleComponent/InputStyle';
-import React, { useEffect } from 'react';
 import css from './Register.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { logIn } from 'redux/Autorization/auth-oprations';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logIn } from 'redux/Autorization/authOprations';
 
 export function LogIn() {
   const dispatch = useDispatch();
-  const isLogIn = useSelector(state => state.auth.isLoggedIn);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    isLogIn && navigate('/');
-  }, [isLogIn, navigate]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -59,7 +51,13 @@ export function LogIn() {
             },
           }}
         />
-        <Button sx={{ mt: 2 }} type="submit" variant="contained" size="small">
+        <Button
+          sx={{ mt: 2 }}
+          color="secondary"
+          type="submit"
+          variant="contained"
+          size="small"
+        >
           Submit
         </Button>
       </form>

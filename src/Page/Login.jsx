@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export function Login() {
+function Login() {
   return createPortal(
     <div className={css.overlay}>
       <div className={css.modal}>
@@ -19,3 +19,4 @@ export function Login() {
     modalRoot
   );
 }
+export default Login;

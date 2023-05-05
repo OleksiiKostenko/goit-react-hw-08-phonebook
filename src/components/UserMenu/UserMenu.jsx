@@ -1,30 +1,28 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-
-import { logOut } from 'redux/Autorization/auth-oprations';
+import css from './UserMenu.module.css';
+import { Button } from '@mui/material';
+import { logOut } from 'redux/Autorization/authOprations';
 
 function UserMenu() {
   const user = useSelector(state => state.auth.user);
   const dispatch = useDispatch();
-
-  const isLogIn = useSelector(state => state.auth.isLoggedIn);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    !isLogIn && navigate('/login');
-  }, [isLogIn, navigate]);
 
   const handleClick = () => {
     dispatch(logOut());
   };
 
   return (
-    <div>
-      <h3>{user.name}</h3>
-      <button type="button" onClick={handleClick}>
-        Logout
-      </button>
+    <div className={css.wrapp}>
+      <h3 className={css.title}>Hello {user.name}</h3>
+      <Button
+        onClick={handleClick}
+        type="submit"
+        variant="contained"
+        size="small"
+        color="secondary"
+      >
+        Log out
+      </Button>
     </div>
   );
 }

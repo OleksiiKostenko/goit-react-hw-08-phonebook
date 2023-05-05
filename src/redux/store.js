@@ -9,10 +9,10 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { persistedClickReducer } from './Contacts/contactsSlice';
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
-import { authReducer } from './Autorization/auth-slice';
+import { authReducer } from './Autorization/authSlice';
+import { contactsReducer } from './Contacts/contactsSlice';
 
 const authPersistConfig = {
   key: 'auth',
@@ -23,7 +23,7 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    contacts: persistedClickReducer,
+    contacts: contactsReducer,
     filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>

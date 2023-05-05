@@ -1,7 +1,9 @@
 import css from '../Phonebook/PhonebookList.module.css';
+import { Button } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact, getContacts } from 'redux/Contacts/contactsSlice';
 import { getFilter } from 'redux/Contacts/filterSlice';
+import { getContacts } from 'redux/Contacts/contactsSlice';
+import { deleteContact } from 'redux/Contacts/contatcOperation';
 
 export const PhonebookList = () => {
   const distpatch = useDispatch();
@@ -20,13 +22,16 @@ export const PhonebookList = () => {
           <p className={css.list_title}>
             {name}:{number}
           </p>
-          <button
-            type="button"
-            className={css.list_btn}
+          <Button
+            sx={{ mr: 2 }}
             onClick={() => distpatch(deleteContact(id))}
+            type="button"
+            variant="contained"
+            size="small"
+            color="secondary"
           >
             Delete
-          </button>
+          </Button>
         </li>
       ))}
     </ul>
