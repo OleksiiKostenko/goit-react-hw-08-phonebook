@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Context } from '../../hooks/Context';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/Autorization/authOprations';
@@ -29,11 +29,19 @@ export const App = () => {
       <Routes>
         <Route
           path="/register"
-          element={<RestrictedRoute component={<Register />} redirectTo="/" />}
+          element={
+            <Suspense>
+              <RestrictedRoute component={<Register />} redirectTo="/" />
+            </Suspense>
+          }
         />
         <Route
           path="/login"
-          element={<RestrictedRoute component={<Login />} redirectTo="/" />}
+          element={
+            <Suspense>
+              <RestrictedRoute component={<Login />} redirectTo="/" />
+            </Suspense>
+          }
         />
         <Route path="/" element={<Layout />}>
           <Route
