@@ -43,7 +43,10 @@ export const App = () => {
             </Suspense>
           }
         />
-        <Route path="/" element={<Layout />}>
+        <Route
+          path="/"
+          element={<PrivateRoute component={<Layout />} redirectTo="/login" />}
+        >
           <Route
             index
             element={<PrivateRoute component={<Home />} redirectTo="/login" />}
