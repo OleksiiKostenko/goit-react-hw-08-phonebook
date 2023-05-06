@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[744],{9744:function(e,t,a){a.r(t),a.d(t,{default:function(){return s}});a(2791);var r="Page_title__60YZt",c="Page_wrapp__HOWtZ",n=a(184);var s=function(){return(0,n.jsx)("div",{className:c,children:(0,n.jsx)("h1",{className:r,children:"Your best contacts book"})})}}}]);
-//# sourceMappingURL=744.0eb2622c.chunk.js.map
